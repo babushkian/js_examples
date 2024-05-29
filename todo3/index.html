@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TODO List</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <main class="app">
+      <section class="greeting">
+        <h2 class="title">
+          Привет как дела,
+          <input type="text" id="name" placeholder="твое имя" />
+        </h2>
+      </section>
+      <section class="create-todo">
+        <h3>Создать дело</h3>
+        <form action="" id="new-todo-form">
+          <h4>Какое дело будешь делать?</h4>
+          <input
+            type="text"
+            name="content"
+            id="content"
+            placeholder="например, сходить за списками"
+          />
+          <h4>Выбери категорию</h4>
+          <div class="options">
+            <label for="category1">
+              <input
+                type="radio"
+                name="category"
+                id="category1"
+                value="busines"
+              />
+              <span class="bubble busines"></span>
+              <div>По делам</div>
+            </label>
+            <label for="category2">
+              <input
+                type="radio"
+                name="category"
+                id="category2"
+                value="personal"
+              />
+              <span class="bubble personal"></span>
+              <div>Для себя</div>
+            </label>
+          </div>
+          <input type="submit" value="Добавить дело" />
+        </form>
+      </section>
+      <section class="todo-list">
+        <h3>СПИСОК ДЕЛ</h3>
+        <div class="list" id="todo-list"></div>
+      </section>
+    </main>
+    <script src="main.js"></script>
+  </body>
+</html>

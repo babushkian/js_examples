@@ -1,0 +1,86 @@
+﻿/* 
+адрес урока:
+https://www.youtube.com/watch?v=033_i8JEbyw */
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: Arial, Helvetica, sans-serif;
+
+}
+
+ul {
+    list-style: none;
+}
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.navbar__list {
+    display: flex;
+    flex-direction: row;
+    
+   /*
+    flex-wrap: nowrap;/*отвечает за перенос элементов на вторую строку при сужении экрана*/
+    /*располагается во вмещающем элементы контейнере*/
+    /*способы крстянуть контент по контейнеру:
+    center, flex-start, space-between space-around*/
+    justify-content: space-evenly;
+    /*ориентация по второстепенной оси: start, end, center*/
+    height: 300px;
+    align-items: center;
+    gap: 20px;/*зазор останется при сжатии окна*/
+    font-size: 20px;
+    margin: 100px 30px;
+    border: 5px solid rgb(122, 70, 35);
+}
+
+.navbar__item {
+    /*flex-grow: max-content;*/
+    flex-grow: 0; /*отвечает заравномерное заполнение родительского контейнера внутренними элементами*/
+    flex-shrink: 1; /*отвечает за перенос текста внутри блока при уменьшении экрана*/
+    width: max-content;
+    border: 5px solid rgb(44, 153, 200);
+}
+
+.item-2 {
+    align-self: flex-end;
+}
+
+.news {
+    margin: 0 30px;
+}
+.news__title {
+    font-size: 60px;
+    text-align: center;
+}
+.news__content {
+    border: 5px solid rgb(122, 70, 35);  
+    display: flex;
+    gap: 30px; /*зазор между карточками*/
+}
+@media (max-width:960px) {
+    .news__content{
+        flex-direction: column;
+    }
+}
+.card {
+    border: 5px solid rgb(44, 153, 200);
+    /* если поставить это свойство к каджому элементу флекс-контейнера, 
+    то они будут занимать в нем равные размеры, а не пропоционально 
+    обьему контента
+    Если поставиь 0, то окна сожмутся по минимальному размеру 
+    (каждое окно подстроится под самое длинное слово) */
+    /* flex: 1; */
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: 300px;
+
+}
+.card__title {
+    font-size: 40px;
+}
+.card__description {
+    font-size: 16px;
+}

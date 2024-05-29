@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;400;700&display=swap");
+:root {
+    --light: #fff3cf;
+    --middle: #ebd495;
+    --brown: #e8c872;
+    --browny: #dec06d;
+    --lightblue: #c9d7dd;
+    --blue: #637a9f;
+    --dark: #303d72;
+    --red-soft: #edc2a8;
+    --red-harder: #e69484;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Nunito", sans-serif;
+}
+
+html {
+    background-color: var(--blue);
+    font-size: 18px;
+}
+
+.main {
+    margin: 0 auto;
+    background: var(--brown);
+    max-width: 800px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+.main h1 {
+    display: block;
+    font-size: 3rem;
+    font-weight: 700;
+    color: white;
+    margin-top: 2rem;
+    text-align: center;
+    text-shadow: 0 0 1px var(--dark);
+}
+
+.meter_block,
+.add_block {
+    margin-top: 1rem;
+    min-width: 500px;
+    width: max-content;
+    /* background-color: aquamarine; */
+    border: 1 px solid var(--dark);
+}
+
+.row {
+    margin-top: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    min-height: 40px;
+    background: var(--light);
+    border: 1px solid var(--browny);
+    border-radius: 0.5rem;
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.1);
+}
+.row.input {
+    background: white;
+    /* margin-bottom: 1.75rem; */
+}
+
+.input_meter {
+    flex: 1 1 0%;
+    flex-wrap: wrap;
+    padding: 0 0.5rem;
+    background: unset;
+    appearance: none;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    color: var(--dark);
+    margin: 2px;
+}
+
+.input_meter.user_id {
+    max-width: 150px;
+}
+
+.input_meter.blanc-error {
+    background-color: var(--red-soft);
+}
+
+button {
+    appearance: none;
+    /* background-color: transparent; */
+    background: var(--middle);
+    border: 1px solid var(--browny);
+    color: var(--dark);
+    border-radius: 6px;
+    padding: 0 4px;
+}
+
+button.adjust {
+    height: 16px;
+    width: 20px;
+    border-radius: 4px;
+    padding: 0;
+}
+
+button.delete {
+    background-color: var(--red-soft);
+    border: 1px solid var(--red-harder);
+}
+
+.arrow {
+    height: 13px;
+    width: 18px;
+}
+
+button:hover {
+    opacity: 0.75;
+}
+
+button:active {
+    opacity: 0.5;
+}
+
+.controls {
+    display: flex;
+    padding: 3px;
+    gap: 8px;
+}
+.updown {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 2px;
+    /* border: 1 px solid var(--dark); */
+}

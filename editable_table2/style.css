@@ -1,0 +1,107 @@
+/* 
+урок в видео:
+https://www.youtube.com/watch?v=4PdBh3lph7c 
+*/
+
+body {
+    position: relative;
+}
+.container {
+    max-width: 1000px;
+    min-width: 600px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 20px auto;
+}
+
+table {
+    /* border: 1px solid black; */
+    border-collapse: collapse;
+    width: 550px;
+}
+th {
+    background-color: rgb(21, 34, 34);
+    color: rgb(240, 235, 229);
+    padding: 8px;
+}
+
+tr {
+    border-bottom: 1px solid rgb(83, 73, 73, 0.4);
+    background-color: rgb(220, 228, 223);
+}
+
+tr:nth-child(even) {
+    background-color: rgb(228, 234, 229);
+}
+
+tr:hover {
+    background-color: rgb(202, 216, 209);
+}
+td {
+    padding: 8px 25px;
+    text-align: center;
+}
+
+td > span:hover {
+    text-decoration: underline;
+}
+
+.popup {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    z-index: 99;
+    flex-shrink: 1;
+    max-width: 340px;
+    justify-content: flex-start;
+    background-color: #fff;
+    border: 1px solid gray;
+    border-radius: 0.5rem;
+    height: fit-content;
+    /* flex: 1; */
+    margin: 10px 0;
+    padding: 10px;
+    transform: translate(200px, 200px);
+}
+
+.popup.active {
+    display: flex;
+}
+
+.popup_elements {
+    display: flex;
+    /* flex-shrink: 1; */
+    flex-grow: 1;
+
+    gap: 4px;
+    justify-content: flex-start;
+}
+
+.popup_elements input {
+    border: none;
+    flex-grow: 1;
+    font-size: 1rem;
+}
+
+.controls {
+    display: flex;
+    gap: 4px;
+}
+
+.controls button {
+    background-color: #999;
+    width: 32px;
+    border: none;
+    padding: 0.4rem;
+    border-radius: 0.25rem;
+    color: #fff;
+    font-weight: 900;
+}
+
+button.commit {
+    background-color: #2777e0;
+}
+
+button.cancel {
+    background-color: #e44337;
+}

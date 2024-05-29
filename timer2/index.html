@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Таймер медитации</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@700&family=Roboto:wght@700&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="logo">
+                <img
+                    src="./images/reddit-1-logo-svgrepo-com.svg"
+                    alt="Логотип"
+                    height="150"
+                />
+            </div>
+            <form onsubmit="app.submit(event)" class="timer">
+                <div class="info">
+                    Установить медитацию на
+                    <input
+                        type="number"
+                        name="time"
+                        id=""
+                        aria-label="Число минт для медитации"
+                        value="10"
+                    />
+                    минут
+                </div>
+                <div class="countdown">
+                    <div class="num" id="min_tens">0</div>
+                    <div class="num" id="min">0</div>
+                    <div class="dot">:</div>
+                    <div class="num" id="sec_tens">0</div>
+                    <div class="num" id="sec">0</div>
+                </div>
+                <button type="submit">
+                    <img src="./images/arrow_forward.svg" alt="Иконка play" />
+                    Запустить таймер
+                </button>
+            </form>
+        </div>
+        <script src="./main.js"></script>
+    </body>
+</html>

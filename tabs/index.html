@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <!--defer - скрипт начинает исполняться после загрузки страницы, поэтому его не надо помещать в конец -->
+    <script src="./main.js" defer></script>
+    <title>Document</title>
+</head>
+<body>
+<div class="wrapper">
+    <h1>WATCH IT!</h1>
+    <div class="tabs">
+        <div role="tablist" aria-label="Streaming content">
+            <button role="tab" aria-selected="true" id="series">
+                Фильмы
+            </button>
+            <button role="tab" aria-selected="false" id="movies">
+                Спорт
+            </button>
+            <button role="tab" aria-selected="false" id="sports">
+                Сериалы
+            </button>
+        </div>
+        <div role="tabpanel" aria-labelledby="series">
+            <p>Лучшие сериалы</p>
+        </div>
+        <div role="tabpanel" aria-labelledby="movies" hidden>
+            <p>Все комедии, драмы, боевики</p>
+        </div>
+        <div role="tabpanel" aria-labelledby="sports" hidden>
+            <p>Лучшие сортивные трансляции</p>
+        </div>
+
+    </div>
+</div>
+</body>
+</html>

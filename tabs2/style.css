@@ -1,0 +1,35 @@
+﻿.container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1000px;
+  min-width: 700px;
+  margin: 25px auto;
+}
+
+.container p {
+  display: none;
+  font-family: Arial, Helvetica, sans-serif;
+  
+  font-size: 18px;
+}
+
+.active {
+  display: block!important;
+} 
+
+.btn {
+  width: 200px;
+  height: 60px;
+  background-color: rgb(183, 131, 94);
+  border: 1px solid rgb(98, 66, 38);
+  border-radius: 15px;
+  font-size: 20px;
+  text-shadow: 0px 2px 3px rgba(42, 15, 4, 0.7);
+  cursor: pointer;
+}
+.btn-active {
+  background-color: orange;
+  transition: background-color .1s  ease-out;
+  /* outline: red; */
+  
+}

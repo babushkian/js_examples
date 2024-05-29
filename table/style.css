@@ -1,0 +1,46 @@
+/* 
+урок в видео:
+https://www.youtube.com/watch?v=4PdBh3lph7c 
+*/
+
+
+.container {
+    max-width: 1000px;
+    min-width: 600px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 20px auto;
+}
+
+
+table {
+    /* border: 1px solid black; */
+    border-collapse: collapse;
+    width: 550px;
+ 
+}
+th {
+    background-color: rgb(15, 37, 37);
+    color:antiquewhite;
+    padding: 8px;
+}
+
+tr {
+    border-bottom: 1px solid rgb(83, 73, 73, 0.4);
+    background-color: rgb(197, 226, 207);
+}
+
+
+
+tr:nth-child(even) {
+    background-color: rgb(205, 233, 210);  
+}
+
+tr:hover {
+    background-color: rgb(169, 219, 195);
+}
+
+td {
+    padding: 8px 25px;
+    text-align: center;
+}
+
